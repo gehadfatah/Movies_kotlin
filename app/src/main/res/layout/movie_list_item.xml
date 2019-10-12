@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="@dimen/padding_10"
+        android:clipToPadding="true"
+        android:layout_marginStart="@dimen/padding_4"
+        android:layout_marginEnd="@dimen/padding_4"
+        android:layout_marginTop="@dimen/padding_4"
+
+>
+    <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/image_progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.Progressbar"
+            app:layout_constraintEnd_toEndOf="@+id/image_item_list"
+            app:layout_constraintBottom_toBottomOf="@+id/image_item_list"
+            app:layout_constraintTop_toTopOf="@+id/image_item_list"
+            app:layout_constraintStart_toStartOf="@+id/image_item_list"
+    />
+
+    <ImageView
+            android:id="@+id/image_item_list"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/movie_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/image_transition_name"
+           />
+
+</androidx.cardview.widget.CardView>
